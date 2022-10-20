@@ -86,6 +86,12 @@ def filter_by_industry(jobs, industry):
 
 
 def get_max_salary(path):
+    data = read(path)
+    max_salary_arr = set()
+    for object in data:
+        if object['max_salary'] != "":
+            max_salary_arr.add(int(object['max_salary']))
+    return[max(max_salary_arr)]
     """Get the maximum salary of all jobs
 
     Must call `read`
