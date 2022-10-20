@@ -121,7 +121,7 @@ def get_min_salary(path):
     min_salary_arr = set()
     for object in data:
         if object['min_salary'] != "":
-            min_salary_arr.add(int(object['max_salary']))
+            min_salary_arr.add(int(object['min_salary']))
     return min(min_salary_arr)
     """Get the minimum salary of all jobs
 
