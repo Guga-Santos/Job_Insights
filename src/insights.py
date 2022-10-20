@@ -96,7 +96,7 @@ def get_max_salary(path):
     data = read(path)
     max_salary_arr = set()
     for object in data:
-        if object['max_salary'] != "":
+        if object['max_salary'].isnumeric():
             max_salary_arr.add(int(object['max_salary']))
     return max(max_salary_arr)
     """Get the maximum salary of all jobs
@@ -120,7 +120,7 @@ def get_min_salary(path):
     data = read(path)
     min_salary_arr = set()
     for object in data:
-        if object['min_salary'] != "":
+        if object['min_salary'].isnumeric():
             min_salary_arr.add(int(object['min_salary']))
     return min(min_salary_arr)
     """Get the minimum salary of all jobs
