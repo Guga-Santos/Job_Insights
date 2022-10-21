@@ -28,7 +28,7 @@ def index():
     return render_template("index.jinja2", md=md)
 
 @bp.route("/job/<index>")
-def unique_job(index):
+def job(index):
     data = read('src/jobs.csv')
     job = get_job(data, index)
     return render_template('job.jinja2', job=job)
