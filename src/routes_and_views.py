@@ -27,6 +27,7 @@ def index():
         """
     return render_template("index.jinja2", md=md)
 
+
 @bp.route("/job/<index>")
 def job(index):
     data = read('src/jobs.csv')
